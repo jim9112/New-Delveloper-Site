@@ -28,12 +28,19 @@ function contentDiv() {
 
 }
 
+// social content creator
 function addSocial() {
     const constructor = document.getElementById('construction');
     constructor.innerHTML = socialOutput;
 }
 
+// project content creatoe
+const addProject = () => {
+    const constructor = document.getElementById('construction');
+    
+}
 
+// creates under construction message
 function constructionMessageCreator(section) {
     clearContent();
     const underConstructionMessage = document.createElement('h1');
@@ -43,7 +50,7 @@ function constructionMessageCreator(section) {
 
 }
 
-
+// create individual buttons
 function createButton(textContent) {
 
     const button = document.createElement('button');
@@ -55,6 +62,8 @@ function createButton(textContent) {
 
 }
 
+
+// create menu buttons
 menuButton.addEventListener('click', (e) => {
     createButton('About');
     createButton('Projects');
@@ -65,6 +74,7 @@ menuButton.addEventListener('click', (e) => {
 
 });
 
+// event listener for menu buttons
 menuContainer.addEventListener('click', (e) => {
     if (e.target.id === 'About') {
         const section = e.target.id;
