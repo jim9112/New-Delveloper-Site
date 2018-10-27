@@ -2,7 +2,7 @@ const menuButton = document.querySelector('.menu');
 const grid = document.querySelector('.grid');
 const menuContainer = document.querySelector('.menu-container');
 const main = document.querySelector('.main');
-
+var counter = 0;
 
 // clears content box
 function clearContent() {
@@ -19,6 +19,7 @@ socialOutput += '<a href="https://twitter.com/jim9112" target="_blank"><img src=
 socialOutput += '<a href="https://stackoverflow.com/users/8940844/james-hannan" target="_blank"><img src="media/stack-overflow-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://www.linkedin.com/in/james-hannan-811771144/" target="_blank"><img src="media/linkedin-in-brands.svg" class="icon"></a>';
 
+
 // adds the content div
 function contentDiv() {
     clearContent();
@@ -34,11 +35,20 @@ function addSocial() {
     constructor.innerHTML = socialOutput;
 }
 
-// project content creatoe
+// project content creator
 const addProject = () => {
     const constructor = document.getElementById('construction');
-    
-}
+    constructor.innerHTML = '<h3>Here are some things that I have made.</h3>';
+    const projectBox = document.createElement('div');
+    projectBox.innerHTML = `<img src="${projectList[counter].image}">`;
+    constructor.appendChild(projectBox);
+    const description = document.createElement('div');
+    description.className = 'description';
+    description.innerHTML = `<h4>${projectList[counter].description}<h4>`;
+    constructor.appendChild(description);
+    createOtherButton('Visit Project');
+    createOtherButton('Next');
+};
 
 // creates under construction message
 function constructionMessageCreator(section) {
@@ -50,7 +60,7 @@ function constructionMessageCreator(section) {
 
 }
 
-// create individual buttons
+// create individual menu buttons
 function createButton(textContent) {
 
     const button = document.createElement('button');
@@ -62,6 +72,17 @@ function createButton(textContent) {
 
 }
 
+// creates other buttons inside constructor
+function createOtherButton(textContent) {
+    const constructor = document.getElementById('construction');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.id = textContent;
+    button.className = 'button ' + textContent;
+    button.style = 'margin: 20px;';
+    button.textContent = textContent;
+    constructor.appendChild(button);
+}
 
 // create menu buttons
 menuButton.addEventListener('click', (e) => {
@@ -81,7 +102,8 @@ menuContainer.addEventListener('click', (e) => {
         constructionMessageCreator(section);
     } else if (e.target.id === 'Projects') {
         const section = e.target.id;
-        constructionMessageCreator(section);
+        contentDiv();
+        addProject();
     } else if (e.target.id === 'Social') {
         contentDiv();
         addSocial();
@@ -90,3 +112,19 @@ menuContainer.addEventListener('click', (e) => {
         constructionMessageCreator(section);
     }
 });
+
+// event listener for buttons on project screen
+main.addEventListener('click', (e) => {
+    if (e.target.id === 'Visit Project') {
+        window.open('https://www.codexworld.com', '_blank');
+    } else if (e.target.id === 'Next') {
+        contentDiv();
+        counter += 1;
+        if (counter >= projectList.length){
+            counter = 0;
+        }
+        addProject();
+    }
+
+});
+

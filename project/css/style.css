@@ -1,7 +1,17 @@
 body {
     background-image: url("tweed.png");
 }
-
+/* #construction {
+    width: 632px;
+} */
+img {
+    max-width: 90%; 
+    height: auto;
+    border-radius: 30px;
+}
+/* .constructor .button {
+    margin: 20;
+} */
 .grid {
     width: 100%;
     height: 100%;
