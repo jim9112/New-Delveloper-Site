@@ -116,7 +116,7 @@ menuContainer.addEventListener('click', (e) => {
 // event listener for buttons on project screen
 main.addEventListener('click', (e) => {
     if (e.target.id === 'Visit Project') {
-        window.open('https://www.codexworld.com', '_blank');
+        window.open(`${projectList[counter].location}`, '_blank');
     } else if (e.target.id === 'Next') {
         contentDiv();
         counter += 1;
