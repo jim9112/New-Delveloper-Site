@@ -46,7 +46,7 @@ h1, h3 {
     background-color: white;
     margin-bottom: 30px;
     min-height: 150px;
-    justify-content: center;
+    /* padding-top: 5%; */
 }
 .main > h1 {
     
