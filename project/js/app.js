@@ -7,9 +7,10 @@ var counter = 0;
 // clears content box
 function clearContent() {
     var lastmessage = document.getElementById('construction');
-    if (lastmessage != null) {
-        lastmessage.parentNode.removeChild(lastmessage);
-    }
+    lastmessage.innerHTML = '';
+    // if (lastmessage != null) {
+    //     lastmessage.parentNode.removeChild(lastmessage);
+    // }
 }
 
 // builds output for social tab
@@ -53,10 +54,11 @@ const addProject = () => {
 // creates under construction message
 function constructionMessageCreator(section) {
     clearContent();
+    const constructor = document.getElementById('construction');
     const underConstructionMessage = document.createElement('h1');
     underConstructionMessage.id = 'construction';
     underConstructionMessage.textContent = section + ': Coming Soon!!';
-    main.appendChild(underConstructionMessage);
+    constructor.appendChild(underConstructionMessage);
 
 }
 
@@ -98,16 +100,20 @@ menuButton.addEventListener('click', (e) => {
 // event listener for menu buttons
 menuContainer.addEventListener('click', (e) => {
     if (e.target.id === 'About') {
+        clearContent();
         const section = e.target.id;
         constructionMessageCreator(section);
     } else if (e.target.id === 'Projects') {
         const section = e.target.id;
-        contentDiv();
+        // contentDiv();
+        clearContent();
         addProject();
     } else if (e.target.id === 'Social') {
-        contentDiv();
+        // contentDiv();
+        clearContent();
         addSocial();
     } else if (e.target.id === 'Contact') {
+        clearContent();
         const section = e.target.id;
         constructionMessageCreator(section);
     }
@@ -118,7 +124,8 @@ main.addEventListener('click', (e) => {
     if (e.target.id === 'Visit Project') {
         window.open(`${projectList[counter].location}`, '_blank');
     } else if (e.target.id === 'Next') {
-        contentDiv();
+        // contentDiv();
+        clearContent();
         counter += 1;
         if (counter >= projectList.length){
             counter = 0;
