@@ -21,15 +21,6 @@ socialOutput += '<a href="https://stackoverflow.com/users/8940844/james-hannan" 
 socialOutput += '<a href="https://www.linkedin.com/in/james-hannan-811771144/" target="_blank"><img src="media/linkedin-in-brands.svg" class="icon"></a>';
 
 
-// adds the content div
-function contentDiv() {
-    clearContent();
-    const content = document.createElement('div');
-    content.id = 'construction';
-    main.appendChild(content);
-
-}
-
 // social content creator
 function addSocial() {
     const constructor = document.getElementById('construction');
@@ -93,8 +84,6 @@ menuButton.addEventListener('click', (e) => {
     createButton('Social');
     createButton('Contact');
     menuButton.style.display = 'none';
-
-
 });
 
 // event listener for menu buttons

@@ -11,4 +11,10 @@ const projectList = [
         image: 'media/Pagination.png',
         description: 'Another Treehouse project. Given an HTML file with a student directory paginated the student directory with JavaScript'
     },
+    {
+        name: 'Form',
+        location: 'treehouse_project_three/form.html',
+        image: 'media/form.png',
+        description: 'Another Treehouse project. An interactive form with adaptive menus and input validation. JavaScript only no APIs'
+    },
 ]
