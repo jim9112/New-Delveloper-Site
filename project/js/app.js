@@ -8,9 +8,6 @@ var counter = 0;
 function clearContent() {
     var lastmessage = document.getElementById('construction');
     lastmessage.innerHTML = '';
-    // if (lastmessage != null) {
-    //     lastmessage.parentNode.removeChild(lastmessage);
-    // }
 }
 
 // builds output for social tab
@@ -55,14 +52,12 @@ function constructionMessageCreator(section) {
 
 // create individual menu buttons
 function createButton(textContent) {
-
     const button = document.createElement('button');
     button.type = 'button';
     button.id = textContent;
     button.className = 'button ' + textContent;
     button.textContent = textContent;
     menuContainer.appendChild(button);
-
 }
 
 // creates other buttons inside constructor
