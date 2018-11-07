@@ -24,6 +24,10 @@ function addSocial() {
     constructor.innerHTML = socialOutput;
 }
 
+function addAbout() {
+    const constructor = document.getElementById('construction');
+    constructor.innerHTML = `<h3>My name is James and I am currently studying web development at Southern New Hampshire University as well as studying full stack JavaScript development with TreeHouse. I live in Southern New Hampshire where I am a father, husband, and avid cyclist. I look forward to using my JavaScript skills to work on the next generation of progressive web applications.</h3>`;
+}
 // project content creator
 const addProject = () => {
     const constructor = document.getElementById('construction');
@@ -85,8 +89,7 @@ menuButton.addEventListener('click', (e) => {
 menuContainer.addEventListener('click', (e) => {
     if (e.target.id === 'About') {
         clearContent();
-        const section = e.target.id;
-        constructionMessageCreator(section);
+        addAbout();
     } else if (e.target.id === 'Projects') {
         const section = e.target.id;
         // contentDiv();
