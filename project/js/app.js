@@ -2,6 +2,7 @@ const menuButton = document.querySelector('.menu');
 const grid = document.querySelector('.grid');
 const menuContainer = document.querySelector('.menu-container');
 const main = document.querySelector('.main');
+const constructor = document.getElementById('construction');
 var counter = 0;
 
 // clears content box
@@ -17,20 +18,16 @@ socialOutput += '<a href="https://twitter.com/jim9112" target="_blank"><img src=
 socialOutput += '<a href="https://stackoverflow.com/users/8940844/james-hannan" target="_blank"><img src="media/stack-overflow-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://www.linkedin.com/in/james-hannan-811771144/" target="_blank"><img src="media/linkedin-in-brands.svg" class="icon"></a>';
 
-
 // social content creator
-function addSocial() {
-    const constructor = document.getElementById('construction');
-    constructor.innerHTML = socialOutput;
-}
+const addSocial = () => constructor.innerHTML = socialOutput;
 
-function addAbout() {
-    const constructor = document.getElementById('construction');
+// about content creator
+const addAbout = () => {
     constructor.innerHTML = `<h3>My name is James and I am currently studying web development at Southern New Hampshire University as well as studying full stack JavaScript development with TreeHouse. I live in Southern New Hampshire where I am a father, husband, and avid cyclist. I look forward to using my JavaScript skills to work on the next generation of progressive web applications.</h3>`;
-}
+};
+
 // project content creator
 const addProject = () => {
-    const constructor = document.getElementById('construction');
     constructor.innerHTML = '<h3>Here are some things that I have made.</h3>';
     const projectBox = document.createElement('div');
     projectBox.innerHTML = `<img src="${projectList[counter].image}">`;
@@ -46,12 +43,10 @@ const addProject = () => {
 // creates under construction message
 function constructionMessageCreator(section) {
     clearContent();
-    const constructor = document.getElementById('construction');
     const underConstructionMessage = document.createElement('h1');
     underConstructionMessage.id = 'construction';
     underConstructionMessage.textContent = section + ': Coming Soon!!';
     constructor.appendChild(underConstructionMessage);
-
 }
 
 // create individual menu buttons
@@ -66,7 +61,6 @@ function createButton(textContent) {
 
 // creates other buttons inside constructor
 function createOtherButton(textContent) {
-    const constructor = document.getElementById('construction');
     const button = document.createElement('button');
     button.type = 'button';
     button.id = textContent;
@@ -92,11 +86,9 @@ menuContainer.addEventListener('click', (e) => {
         addAbout();
     } else if (e.target.id === 'Projects') {
         const section = e.target.id;
-        // contentDiv();
         clearContent();
         addProject();
     } else if (e.target.id === 'Social') {
-        // contentDiv();
         clearContent();
         addSocial();
     } else if (e.target.id === 'Contact') {
@@ -111,7 +103,6 @@ main.addEventListener('click', (e) => {
     if (e.target.id === 'Visit Project') {
         window.open(`${projectList[counter].location}`, '_blank');
     } else if (e.target.id === 'Next') {
-        // contentDiv();
         clearContent();
         counter += 1;
         if (counter >= projectList.length){
