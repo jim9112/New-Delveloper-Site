@@ -110,6 +110,5 @@ main.addEventListener('click', (e) => {
         }
         addProject();
     }
-
 });
 

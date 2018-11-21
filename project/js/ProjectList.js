@@ -17,4 +17,10 @@ const projectList = [
         image: 'media/form.png',
         description: 'Another Treehouse project. An interactive form with adaptive menus and input validation. JavaScript only no APIs'
     },
-]
+    {
+        name: 'Tic Tac Toe',
+        location: 'treehouse_project_four/TicTacToe.html',
+        image: 'media/TicTacToe.png',
+        description: 'Another Treehouse project. A two person Tic Tac Toe game. JavaScript only no APIs'
+    },
+];
