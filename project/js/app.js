@@ -70,6 +70,7 @@ function createOtherButton(textContent) {
     constructor.appendChild(button);
 }
 
+
 // create menu buttons
 menuButton.addEventListener('click', (e) => {
     createButton('About');
