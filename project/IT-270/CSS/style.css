@@ -1,48 +1,86 @@
 ul {
     list-style-type: none;
 }
-
-
-
-.header { grid-area: header; }
-.menu-container { grid-area: menu;}
-.content { grid-area: main; }
-
+body {
+    background-image: url("../Media/SiteBackground.png");
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+}
 .main {
     display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main main main'
-      'menu main main main main main'
-      'blank footer footer footer footer footer';
-    background-image: url("../Media/SiteBackground.png");
-    position:fixed;
     padding:0;
     margin:0;
-
     top:0;
     left:0;
-
     width: 100%;
     height: 100%;
 }
+
+/* Positioning on Page */
+img.header {
+    grid-column: 1;
+    grid-row: 1:
+}
+h1.header{
+    grid-column: 2 / span 4;
+    grid-row: 1;
+}
+.description {
+    grid-column: 2;
+    grid-row: 2;
+}
+.payroll {
+    grid-column: 2;
+    grid-row: 3;
+}
+.accounts{
+    grid-column: 2;
+    grid-row: 4;
+}
+.taxes {
+    grid-column: 2;
+    grid-row: 5;
+}
+.menu-container{
+    grid-column: 1;
+    grid-row: 2 / span 3;
+
+}
+.menu-container a {
+    color: #226DA3;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 .header {
     font-size: 70px;
     color: #226DA3;
     text-align: center;
 }
-/* .menu-container {
-    position: fixed;
-    left: 0;
-} */
+h1.header {
+    margin-top: 10px;
+}
+ img.header { 
+    width: 100px;
+    height: 100px;
+}
 
 .menu-container {
     background-color: rgb(255, 255, 255, 0.4);
     border-radius: 30px;
     max-width: 200px;
+    margin-left: 10px;
+    
+}
+.menu-container p {
+    text-align: center;
 }
 .content {
     color: white;
+    margin-left: 5%;
 }
 .description {
     background-color: rgba(0, 0, 0, 0.151);
@@ -51,4 +89,17 @@ ul {
     margin-left: 20%;
     margin-right: 20%;
     padding: 15px;
+}
+
+.services {
+    background-color: rgba(0, 0, 0, 0.151);
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+/* About Kyle Page Specific */
+.kyle {
+    width: 200px;
+    height: auto;
 }
