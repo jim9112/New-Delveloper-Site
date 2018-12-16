@@ -1,27 +1,34 @@
 ul {
     list-style-type: none;
 }
+
 body {
     background-image: url("../Media/SiteBackground.png");
     background-size: cover;
     background-repeat: no-repeat;
+    letter-spacing: 1px;
 }
+
 a {
     text-decoration: none;
 }
+
 td {
     max-width: 500px;
 }
-th, td {
+
+th,
+td {
     border: 1px solid black;
 }
+
 .main {
     display: grid;
     grid-template-columns: 200px auto;
-    padding:0;
-    margin:0;
-    top:0;
-    left:0;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -30,23 +37,34 @@ th, td {
 a.header {
     margin: auto;
 }
-h1.header{
+
+h1.header {
     grid-column: 2 / span 1;
     grid-row: 1;
 }
+
 .description {
     grid-column: 2;
     grid-row: 2;
 }
+
+.reviews {
+    grid-column: 2;
+    grid-row: 2;
+    margin: auto;
+}
+
 .big-body {
     grid-column: 2;
     grid-row: 3;
 }
-.menu-container{
+
+.menu-container {
     grid-column: 1;
     grid-row: 2;
 
 }
+
 .menu-container a {
     color: #226DA3;
     font-size: 20px;
@@ -59,10 +77,12 @@ h1.header{
     color: #226DA3;
     text-align: center;
 }
+
 h1.header {
     margin-top: 10px;
 }
- img.header { 
+
+img.header {
     width: 100px;
     height: 100px;
 }
@@ -75,30 +95,34 @@ h1.header {
     position: fixed;
     margin-top: 180px;
 }
+
 .menu-container p {
     text-align: center;
 }
+
 .content {
     color: white;
     margin-left: 5%;
 }
+
 .description {
     text-align: center;
     margin: auto;
 }
+
 .big-body {
     /* margin: auto; */
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 15px;
-    color: white; 
+    color: white;
 }
 
 /* background for main content */
 .background {
-    background-color: rgba(0, 0, 0, 0.151);
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-    padding: 15px; 
+    padding: 15px;
 }
 
 
@@ -110,6 +134,7 @@ h1.header {
     height: auto;
     margin: auto;
 }
+
 .aboutKyle {
     grid-column: 2;
     grid-row: 3;
@@ -118,6 +143,7 @@ h1.header {
 
 /* Contact Page Specific */
 form {
+    color: white;
     grid-column: 2;
     grid-row: 2;
     line-height: 1.6;
@@ -128,10 +154,42 @@ form {
     justify-content: center;
     column-gap: 10px;
 }
+#form8 {
+    grid-column: span 2;
+    text-align: center;
+}
+input {
+    height: 20px;
+}
+#submit {
+    margin: auto;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
 /* Resources */
 .links-table {
     color: white;
     grid-column: 2;
     grid-row: 2;
     margin: auto;
+}
+
+/* customers page */
+.review img {
+    width: 200px;
+    height: 200px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.review {
+    color: white;
+    display: grid;
+    grid-template-columns: 250px auto;
+    margin-bottom: 15px;
+    margin-left: 25px;
 }
