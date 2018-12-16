@@ -1,12 +1,16 @@
 ul {
     list-style-type: none;
 }
-
-body {
-    background-image: url("../Media/SiteBackground.png");
+html { 
+    background: url("../Media/SiteBackground.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
+  }
+body {
     letter-spacing: 1px;
+    margin: 0px;
 }
 
 a {
@@ -17,9 +21,9 @@ td {
     max-width: 500px;
 }
 
-th,
 td {
     border: 1px solid black;
+    padding: 5px;
 }
 
 .main {
@@ -142,10 +146,19 @@ img.header {
 }
 
 /* Contact Page Specific */
+.interested {
+    color: white;
+    text-align: center;
+    grid-column: 2;
+    margin: auto;
+    max-width: 50%;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
 form {
     color: white;
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 3;
     line-height: 1.6;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -176,6 +189,7 @@ input {
     grid-column: 2;
     grid-row: 2;
     margin: auto;
+    max-width: 70%;
 }
 
 /* customers page */
@@ -192,4 +206,13 @@ input {
     grid-template-columns: 250px auto;
     margin-bottom: 15px;
     margin-left: 25px;
+}
+
+/* footer */
+.footer {
+    background-color: rgb(255, 255, 255, 0.4);
+    width: 100%;
+    height: 75px;
+    margin-top: 25px;
+    text-align: end;
 }
