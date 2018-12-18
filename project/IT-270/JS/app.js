@@ -15,7 +15,7 @@ picture.addEventListener('click', (e) => {
         if (theTurnB>360){
             theTurnB = 0;
         }
-    } else {
+    } else if(e.target.className === 'flipC'){
         e.target.style = `transform: rotate(${theTurnC}deg)`;
         theTurnC += 15;
         if (theTurnC>360){
