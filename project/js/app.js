@@ -3,16 +3,16 @@ const grid = document.querySelector('.grid');
 const menuContainer = document.querySelector('.menu-container');
 const main = document.querySelector('.main');
 const constructor = document.getElementById('construction');
-var counter = 0;
+let counter = 0;
 
 // clears content box
 function clearContent() {
-    var lastmessage = document.getElementById('construction');
+    let lastmessage = document.getElementById('construction');
     lastmessage.innerHTML = '';
 }
 
 // builds output for social tab
-var socialOutput = '<h3>Follow me on these social networking platforms.</h3>';
+let socialOutput = '<h3>Follow me on these social networking platforms.</h3>';
 socialOutput += '<a href="https://github.com/jim9112" target="_blank"><img src="media/github-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://twitter.com/jim9112" target="_blank"><img src="media/twitter-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://stackoverflow.com/users/8940844/james-hannan" target="_blank"><img src="media/stack-overflow-brands.svg" class="icon"></a>';
