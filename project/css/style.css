@@ -17,6 +17,10 @@ h1, h3 {
     letter-spacing: 2px;
 }
 
+.image {
+    max-width: 600px;
+    max-height: 300px;
+}
 .intro {
     color: white;
     margin: 0px;

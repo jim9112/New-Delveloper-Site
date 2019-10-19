@@ -1,5 +1,17 @@
 const projectList = [
     {
+        name: '140CharactersOfAwesome',
+        location: 'https://vast-sands-68533.herokuapp.com/',
+        image: 'media/social-media.png',
+        description: 'This is a basic social media application. It is built using the MERN stack.'
+    },
+    {
+        name: 'Math Flashcards',
+        location: 'https://jim9112.github.io/Math-Flashcards/',
+        image: 'media/Flashcards.png',
+        description: 'A little application built to help my son study math. Built with HTML, CSS, and JavaScript'
+    },
+    {
         name: 'quote generator',
         location: 'treehouse_project_one/quote.html',
         image: 'media/quote_generator.png',

@@ -6,10 +6,10 @@ const constructor = document.getElementById('construction');
 let counter = 0;
 
 // clears content box
-function clearContent() {
+const clearContent = () => {
     let lastmessage = document.getElementById('construction');
     lastmessage.innerHTML = '';
-}
+};
 
 // builds output for social tab
 let socialOutput = '<h3>Follow me on these social networking platforms.</h3>';
@@ -30,7 +30,7 @@ const addAbout = () => {
 const addProject = () => {
     constructor.innerHTML = '<h3>Here are some things that I have made.</h3>';
     const projectBox = document.createElement('div');
-    projectBox.innerHTML = `<img src="${projectList[counter].image}">`;
+    projectBox.innerHTML = `<img class="image" src="${projectList[counter].image}">`;
     constructor.appendChild(projectBox);
     const description = document.createElement('div');
     description.className = 'description';
