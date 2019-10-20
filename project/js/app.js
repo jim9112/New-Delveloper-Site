@@ -1,6 +1,7 @@
 const menuButton = document.querySelector('.menu');
 const grid = document.querySelector('.grid');
 const menuContainer = document.querySelector('.menu-container');
+const menuIcon = document.querySelector('.menuIcon');
 const main = document.querySelector('.main');
 const constructor = document.getElementById('construction');
 let counter = 0;
@@ -70,16 +71,6 @@ function createOtherButton(textContent) {
     constructor.appendChild(button);
 }
 
-
-// create menu buttons
-menuButton.addEventListener('click', (e) => {
-    createButton('About');
-    createButton('Projects');
-    createButton('Social');
-    createButton('Contact');
-    menuButton.style.display = 'none';
-});
-
 // event listener for menu buttons
 menuContainer.addEventListener('click', (e) => {
     if (e.target.id === 'About') {
@@ -113,3 +104,8 @@ main.addEventListener('click', (e) => {
     }
 });
 
+// Eventlistener for hamburger menu (mobile view)
+menuIcon.addEventListener('click', (e) => {
+    menuContainer.style.display = 'grid';
+    menuContainer.onclick = (e) => menuContainer.style.display = 'none';
+});
