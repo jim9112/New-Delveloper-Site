@@ -1,4 +1,3 @@
-const menuButton = document.querySelector('.menu');
 const grid = document.querySelector('.grid');
 const menuContainer = document.querySelector('.menu-container');
 const menuIcon = document.querySelector('.menuIcon');
