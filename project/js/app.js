@@ -23,7 +23,7 @@ const addSocial = () => constructor.innerHTML = socialOutput;
 
 // about content creator
 const addAbout = () => {
-    constructor.innerHTML = `<h3>My name is James and I am currently studying web development at Southern New Hampshire University as well as studying full stack JavaScript development with TreeHouse. I live in Southern New Hampshire where I am a father, husband, and avid cyclist. I look forward to using my JavaScript skills to work on the next generation of progressive web applications.</h3>`;
+    constructor.innerHTML = `<h3>My name is James and I am currently studying web development at Southern New Hampshire University. I live in Southern New Hampshire where I am a father, husband, and avid cyclist. I enjoy working with NodeJS and React and I look forward to using my JavaScript skills to build your progressive web applications.</h3>`;
 };
 
 // project content creator
