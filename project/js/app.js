@@ -40,25 +40,6 @@ const addProject = () => {
     createOtherButton('Next');
 };
 
-// creates under construction message
-function constructionMessageCreator(section) {
-    clearContent();
-    const underConstructionMessage = document.createElement('h1');
-    underConstructionMessage.id = 'construction';
-    underConstructionMessage.textContent = section + ': Coming Soon!!';
-    constructor.appendChild(underConstructionMessage);
-}
-
-// create individual menu buttons
-function createButton(textContent) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.id = textContent;
-    button.className = 'button ' + textContent;
-    button.textContent = textContent;
-    menuContainer.appendChild(button);
-}
-
 // creates other buttons inside constructor
 function createOtherButton(textContent) {
     const button = document.createElement('button');
@@ -82,11 +63,7 @@ menuContainer.addEventListener('click', (e) => {
     } else if (e.target.id === 'Social') {
         clearContent();
         addSocial();
-    } else if (e.target.id === 'Contact') {
-        clearContent();
-        const section = e.target.id;
-        constructionMessageCreator(section);
-    }
+    } 
 });
 
 // event listener for buttons on project screen
