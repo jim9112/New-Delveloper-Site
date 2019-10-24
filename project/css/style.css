@@ -116,14 +116,11 @@ h1, h3, p {
     .menu-container {
         width: 100%;
         height: 50%;
-        /* display: none; */
         grid-template-columns: auto;
         justify-content: center;
         top: 0;
-        /* z-index: 1; */
         position: absolute;
         padding-top: 20%;
-        /* background-color: rgba(0, 0, 0, 0.7); */
     }
     .menu-outer {
         position: absolute;
@@ -133,10 +130,6 @@ h1, h3, p {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         top: 0;
-    }
-    .button {
-        /* width: 250px;
-        height: 100px; */
     }
     .image {
         max-width: 90%;
