@@ -1,7 +1,9 @@
 const grid = document.querySelector('.grid');
 const menuContainer = document.querySelector('.menu-container');
+const outerMenuBox = document.querySelector('.menu-outer');
 const menuIcon = document.querySelector('.menuIcon');
 const main = document.querySelector('.main');
+const banner = document.querySelector('.banner');
 const constructor = document.getElementById('construction');
 let counter = 0;
 
@@ -12,23 +14,27 @@ const clearContent = () => {
 };
 
 // builds output for social tab
-let socialOutput = '<h3>Follow me on these social networking platforms.</h3>';
+let socialOutput = '';
 socialOutput += '<a href="https://github.com/jim9112" target="_blank"><img src="media/github-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://twitter.com/jim9112" target="_blank"><img src="media/twitter-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://stackoverflow.com/users/8940844/james-hannan" target="_blank"><img src="media/stack-overflow-brands.svg" class="icon"></a>';
 socialOutput += '<a href="https://www.linkedin.com/in/james-hannan-811771144/" target="_blank"><img src="media/linkedin-in-brands.svg" class="icon"></a>';
 
 // social content creator
-const addSocial = () => constructor.innerHTML = socialOutput;
+const addSocial = () => {
+    banner.textContent = 'Follow me on these social networking platforms';
+    constructor.innerHTML = socialOutput;
+};
 
 // about content creator
 const addAbout = () => {
-    constructor.innerHTML = `<h3>My name is James and I am currently studying web development at Southern New Hampshire University. I live in Southern New Hampshire where I am a father, husband, and avid cyclist. I enjoy working with NodeJS and React and I look forward to using my JavaScript skills to build your progressive web applications.</h3>`;
+    banner.textContent = 'Here is a little bit about me';
+    constructor.innerHTML = `<h3>My name is James and I am currently studying web development at Southern New Hampshire University. I live in Southern New Hampshire where I am a father, husband, and avid cyclist. I enjoy working with NodeJS and React and I look forward to using my JavaScript skills to build your progressive web application.</h3>`;
 };
 
 // project content creator
 const addProject = () => {
-    constructor.innerHTML = '<h3>Here are some things that I have made.</h3>';
+    banner.textContent = 'Here are some things that I have made';
     const projectBox = document.createElement('div');
     projectBox.innerHTML = `<img class="image" src="${projectList[counter].image}">`;
     constructor.appendChild(projectBox);
@@ -36,7 +42,7 @@ const addProject = () => {
     description.className = 'description';
     description.innerHTML = `<h4>${projectList[counter].description}<h4>`;
     constructor.appendChild(description);
-    createOtherButton('Visit Project');
+    createOtherButton('Try It');
     createOtherButton('Next');
 };
 
@@ -68,7 +74,7 @@ menuContainer.addEventListener('click', (e) => {
 
 // event listener for buttons on project screen
 main.addEventListener('click', (e) => {
-    if (e.target.id === 'Visit Project') {
+    if (e.target.id === 'Try It') {
         window.open(`${projectList[counter].location}`, '_blank');
     } else if (e.target.id === 'Next') {
         clearContent();
@@ -82,6 +88,6 @@ main.addEventListener('click', (e) => {
 
 // Eventlistener for hamburger menu (mobile view)
 menuIcon.addEventListener('click', (e) => {
-    menuContainer.style.display = 'grid';
-    menuContainer.onclick = (e) => menuContainer.style.display = 'none';
+    outerMenuBox.style.display = 'block';
+    outerMenuBox.onclick = (e) => outerMenuBox.style.display = 'none';
 });
